@@ -1,0 +1,18 @@
+//vim的一些基本用法
+
+vim -O day19.txt test2.c test.c
+split day19.txt
+
+ctrl+w+h,j,k,l 
+ctrl+w+w,p
+ctrl+w+t,b
+
+
+预处理   gcc -E test.c -o test.i
+编译     gcc -S test.i -o test.s
+汇编     gcc -c test.s -o test.o
+链接     gcc test.o xx.o test
+
+gdb的基本用法
+
+

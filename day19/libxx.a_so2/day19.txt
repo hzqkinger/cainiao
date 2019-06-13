@@ -1,0 +1,15 @@
+此时我们想运行hello.c源程序，有三种思路：（注意，下面的命令都是在shell终端的命令行输入的）
+一. gcc -c hello.c -o hello.o
+    gcc -c main.c -o main.o
+	gcc -o hello hello.o main.o
+	像上面一样，编译多个源文件生成多个.o文件，再链接多个.o文件生成一个可执行的目标文件hello
+
+二. gcc -o hello.o -c hello.c
+    ar -crs libmyhello.a hello.o
+	gcc -o hello main.c -static -L. -lmyhello
+	象上面一样，先将一堆源文件编译生成一堆.o文件，然后用ar命令将多个.o转换成.a静态库；最后静态库和main.c文件生成可执行的目标文件hello
+
+三. gcc -o hello.o -c hello.c
+    gcc -shared -fPIC -o libmyhello.so hello.o
+	gcc -o hello main.c -L. lmyhello
+	像上面一样，先将一堆源文件编译生成.o文件，然后将多个.o文件转换为.so动态库;最后动态库和main.c文件生成可执行的目标文件hello
