@@ -1,0 +1,27 @@
+123456789
+a
+a
+a
+affff
+gcc -g
+gdb a.out
+
+l: check orignal code
+s:step by step 
+n:step by step
+b hanghao if:
+d: delete breakpoint
+
+
+bt: print stack
+r:  run function
+finish: leave function
+
+
+tiao shi : core
+          1. gcc -g
+          2. ulimit -c 10240
+          3. ./a.out
+          4. gdb a.out core.1923
+
+
