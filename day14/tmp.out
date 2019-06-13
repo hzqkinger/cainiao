@@ -1,0 +1,6 @@
+before vfork
+In child's process
+pid = 3746, glob = 7, var = 89
+before vfork
+In parent's process
+pid = 3745, glob = 6, var = 88
