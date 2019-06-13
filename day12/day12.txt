@@ -1,0 +1,27 @@
+size a.out //查看可执行文件正文段,数据段和bss段的长度`
+
+gcc -c hello.c -o hello.o
+gcc -c xx.c -o xx.o
+ar -crs libhello.a hello.o xx.o  //生成静态库
+gcc main.c libhello.a -o main   //使用静态链接
+nm libhello.a //查看
+
+gcc -shared -fPIC -o libhello.so hello.c xx.c  //生成动态库
+file libhello.so  //查看libhello.so的文件类型
+
+
+# /etc/profile     设置环境变量的文件的绝对路径
+
+# System wide environment and startup programs, for login setup
+# Functions and aliases go in /etc/bashrc
+
+# It's NOT a good idea to change this file unless you know what you
+# are doing. It's much better to create a custom.sh shell script in
+# /etc/profile.d/ to make custom changes to your environment, as this
+# will prevent the need for merging in future updates.
+
+char *getenv(const char *name);//从环境表中取一个指定环境表两的值
+int putenv(char *str);//取形式为name=value的字符串，将其放到环境表中去
+int setenv(const char *name,const char *value,int rewrite);//将name设置为value
+int unsetenv(const char *name);//删除name的定义
+clearenv      //它被用来删除环境表中的所有项       
