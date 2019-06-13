@@ -1,0 +1,187 @@
+
+main:     file format elf64-x86-64
+
+Contents of section .interp://包含了动态链接器的路径
+Contents of section .note.ABI-tag://用于指定程序的ABI
+Contents of section .note.gnu.build-id://
+Contents of section .gnu.hash://
+Contents of section .dynsym://动态链接时的符号表，主要用于保存动套链接时的符号
+Contents of section .dynstr://动态链接时的字符串表，主要是动态链接符号的符号名
+Contents of section .gnu.version://符号版本相关
+Contents of section .gnu.version_r://符号版本相关
+Contents of section .rela.dyn://
+Contents of section .rela.plt://
+Contents of section .init://程序执行前的初始化代码，这些代码早于main函数被执行
+Contents of section .plt: //
+Contents of section .text://代码段，存放程序的可执行代码
+Contents of section .fini://程序退出是执行的代码
+Contents of section .rodata://只读数据段
+Contents of section .eh_frame_hdr://与c++异常处理相关
+Contents of section .eh_frame://与c++异常处理相关
+Contents of section .ctors://这个段保存全局构造函数指针
+Contents of section .dtors://这个段保存全局析构函数指针
+Contents of section .jcr://java程序相关
+Contents of section .dynamic://动态链接信息
+Contents of section .got://
+Contents of section .got.plt://保存PLT信息
+Contents of section .data://保存程序中的初始化数据
+Contents of section .comment://包含编译器版本信息
+
+Disassembly of section .interp:
+0000000000400200 <.interp>:
+
+Disassembly of section .note.ABI-tag:
+000000000040021c <.note.ABI-tag>:
+
+Disassembly of section .note.gnu.build-id:
+000000000040023c <.note.gnu.build-id>:
+
+Disassembly of section .gnu.hash:
+0000000000400260 <.gnu.hash>:
+
+Disassembly of section .dynsym:
+0000000000400280 <.dynsym>:
+
+Disassembly of section .dynstr:
+00000000004002e0 <.dynstr>:
+
+Disassembly of section .gnu.version:
+0000000000400320 <.gnu.version>:
+
+Disassembly of section .gnu.version_r:
+0000000000400328 <.gnu.version_r>:
+
+Disassembly of section .rela.dyn:
+0000000000400348 <.rela.dyn>:
+
+Disassembly of section .rela.plt:
+0000000000400360 <.rela.plt>:
+
+Disassembly of section .init:
+0000000000400390 <_init>:
+
+Disassembly of section .plt:
+00000000004003a8 <printf@plt-0x10>:
+00000000004003b8 <printf@plt>:
+00000000004003c8 <__libc_start_main@plt>:
+
+Disassembly of section .text:
+00000000004003e0 <_start>:
+000000000040040c <call_gmon_start>:
+0000000000400430 <__do_global_dtors_aux>:
+00000000004004a0 <frame_dummy>:
+00000000004004c4 <func1>:
+00000000004004e5 <main>:
+0000000000400540 <__libc_csu_fini>:
+0000000000400550 <__libc_csu_init>:
+00000000004005e0 <__do_global_ctors_aux>:
+
+Disassembly of section .fini:
+0000000000400618 <_fini>:
+
+Disassembly of section .rodata:
+0000000000400628 <_IO_stdin_used>:
+0000000000400630 <__dso_handle>:
+
+Disassembly of section .eh_frame_hdr:
+000000000040063c <.eh_frame_hdr>:
+
+Disassembly of section .eh_frame:
+0000000000400668 <__FRAME_END__-0x98>:
+
+0000000000400700 <__FRAME_END__>:
+
+Disassembly of section .ctors:
+0000000000600708 <__CTOR_LIST__>:
+0000000000600710 <__CTOR_END__>:
+
+Disassembly of section .dtors:
+0000000000600718 <__DTOR_LIST__>:
+0000000000600720 <__DTOR_END__>:
+
+Disassembly of section .jcr:
+0000000000600728 <__JCR_END__>:
+
+Disassembly of section .dynamic:
+0000000000600730 <_DYNAMIC>:
+
+Disassembly of section .got:
+00000000006008c0 <.got>:
+
+Disassembly of section .got.plt:
+00000000006008c8 <_GLOBAL_OFFSET_TABLE_>:
+
+Disassembly of section .data:
+00000000006008f0 <__data_start>:
+00000000006008f4 <globa_var>:
+00000000006008f8 <static_var.1603>:
+
+Disassembly of section .bss:
+0000000000600900 <completed.6352>:
+0000000000600908 <dtor_idx.6354>:
+0000000000600910 <static_var2.1604>:
+0000000000600914 <global_var2>:
+
+Disassembly of section .comment:
+0000000000000000 <.comment>:
+
+
+--------------------------------------我是分割线----------------------------------------------------------
+
+
+main:     file format elf64-x86-64
+
+Sections:
+Idx Name          Size      VMA               LMA               File off  Algn
+  0 .interp       0000001c  0000000000400200  0000000000400200  00000200  2**0
+                  CONTENTS, ALLOC, LOAD, READONLY, DATA
+  1 .note.ABI-tag 00000020  000000000040021c  000000000040021c  0000021c  2**2
+                  CONTENTS, ALLOC, LOAD, READONLY, DATA
+  2 .note.gnu.build-id 00000024  000000000040023c  000000000040023c  0000023c  2**2
+                  CONTENTS, ALLOC, LOAD, READONLY, DATA
+  3 .gnu.hash     0000001c  0000000000400260  0000000000400260  00000260  2**3
+                  CONTENTS, ALLOC, LOAD, READONLY, DATA
+  4 .dynsym       00000060  0000000000400280  0000000000400280  00000280  2**3
+                  CONTENTS, ALLOC, LOAD, READONLY, DATA
+  5 .dynstr       0000003f  00000000004002e0  00000000004002e0  000002e0  2**0
+                  CONTENTS, ALLOC, LOAD, READONLY, DATA
+  6 .gnu.version  00000008  0000000000400320  0000000000400320  00000320  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, DATA
+  7 .gnu.version_r 00000020  0000000000400328  0000000000400328  00000328  2**3
+                  CONTENTS, ALLOC, LOAD, READONLY, DATA
+  8 .rela.dyn     00000018  0000000000400348  0000000000400348  00000348  2**3
+                  CONTENTS, ALLOC, LOAD, READONLY, DATA
+  9 .rela.plt     00000030  0000000000400360  0000000000400360  00000360  2**3
+                  CONTENTS, ALLOC, LOAD, READONLY, DATA
+ 10 .init         00000018  0000000000400390  0000000000400390  00000390  2**2
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+ 11 .plt          00000030  00000000004003a8  00000000004003a8  000003a8  2**2
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+ 12 .text         00000238  00000000004003e0  00000000004003e0  000003e0  2**4
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+ 13 .fini         0000000e  0000000000400618  0000000000400618  00000618  2**2
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+ 14 .rodata       00000014  0000000000400628  0000000000400628  00000628  2**3
+                  CONTENTS, ALLOC, LOAD, READONLY, DATA
+ 15 .eh_frame_hdr 0000002c  000000000040063c  000000000040063c  0000063c  2**2
+                  CONTENTS, ALLOC, LOAD, READONLY, DATA
+ 16 .eh_frame     0000009c  0000000000400668  0000000000400668  00000668  2**3
+                  CONTENTS, ALLOC, LOAD, READONLY, DATA
+ 17 .ctors        00000010  0000000000600708  0000000000600708  00000708  2**3
+                  CONTENTS, ALLOC, LOAD, DATA
+ 18 .dtors        00000010  0000000000600718  0000000000600718  00000718  2**3
+                  CONTENTS, ALLOC, LOAD, DATA
+ 19 .jcr          00000008  0000000000600728  0000000000600728  00000728  2**3
+                  CONTENTS, ALLOC, LOAD, DATA
+ 20 .dynamic      00000190  0000000000600730  0000000000600730  00000730  2**3
+                  CONTENTS, ALLOC, LOAD, DATA
+ 21 .got          00000008  00000000006008c0  00000000006008c0  000008c0  2**3
+                  CONTENTS, ALLOC, LOAD, DATA
+ 22 .got.plt      00000028  00000000006008c8  00000000006008c8  000008c8  2**3
+                  CONTENTS, ALLOC, LOAD, DATA
+ 23 .data         0000000c  00000000006008f0  00000000006008f0  000008f0  2**2
+                  CONTENTS, ALLOC, LOAD, DATA
+ 24 .bss          00000018  0000000000600900  0000000000600900  000008fc  2**3
+                  ALLOC
+ 25 .comment      0000005a  0000000000000000  0000000000000000  000008fc  2**0
+                  CONTENTS, READONLY

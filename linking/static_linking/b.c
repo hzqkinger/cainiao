@@ -1,0 +1,11 @@
+int shared = 1;
+
+void swap(int *a,int * b)
+{
+	*a ^= *b ^= *a ^= *b;
+}
+
+void func(int a)
+{
+	shared += a;
+}
