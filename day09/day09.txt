@@ -1,0 +1,10 @@
+//vim 的多窗口功能： 
+sp [filename]  
+ctrl+w+j  ctrl+w+k  ctr+w+q
+-------------------------------------------
+
+编译过程：
+1.预处理（进行宏替换）            gcc -E hello.c -o hello.i
+2.编译（生成汇编）                gcc -S hello.i -o hello.s
+3.汇编（生成机器可识别的代码）    gcc -c hello.s -o hello.o
+4.链接（生成可执行文件或库文件）  gcc hello.o -o hello
