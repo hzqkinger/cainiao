@@ -1,0 +1,4 @@
+a write to stdoubefore fork
+pid=3107,glob=9,var=89
+before fork
+pid=3106,glob=8,var=88
